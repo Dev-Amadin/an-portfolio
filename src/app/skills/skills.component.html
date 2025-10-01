@@ -1,0 +1,40 @@
+<section
+  id="skills"
+  class="py-20 px-6 bg-gradient-to-r from-[#022c2b] to-[#01191d]"
+>
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-2 text-gray-300">
+      My <span class="text-outline">Skills</span>
+    </h2>
+    <p class="text-center text-sm text-slate-300 mb-12 mx-auto">
+      The tools and technologies I use to bring ideas to life.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-10">
+      @for(item of skillData; track $index){
+
+      <div
+        class="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-lg border border-white/10 hover:bg-black/10"
+      >
+        <h3 class="text-2xl font-semibold mb-4 text-teal-400">
+          {{ item.title }}
+        </h3>
+        <div class="flex flex-wrap gap-4">
+          @for (skill of item.skills; track $index) {
+          <div
+            class="flex content-center text-center gap-2 px-3 py-2 bg-black/40 rounded-lg cursor-pointer hover:shadow-lg shadow-teal-400"
+          >
+            <img
+            [src]="skill.icon"
+            class="w-5 h-5 "
+            [alt]="skill.name"
+          />
+            <span class="text-sm text-gray-300">{{ skill.name }}</span>
+          </div>
+          }
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>
