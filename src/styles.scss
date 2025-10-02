@@ -10,7 +10,11 @@
   font-family: "Alan Sans", sans-serif;
 }
 
-.text-outline{
-    -webkit-text-stroke: 1px #fff;
-    color: transparent;
+html {
+  scroll-behavior: smooth;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
 }

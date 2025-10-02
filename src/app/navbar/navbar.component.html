@@ -7,10 +7,10 @@
       class="hidden sm:flex space-x-8 text-white text-sm font-light uppercase"
     >
       @for(item of navItems; track item.id){
-      <li class="hover:text-teal-500 transition-colors" [class.text-teal-400]="activeSection()== item.id">{{ item.label }}</li>
+      <li class="hover:text-teal-500 transition-colors cursor-pointer" [class.text-teal-400]="activeSection()== item.id" (click)="scrollTo(item.id)">{{ item.label }}</li>
       }
     </ul>
-    <button
+    <button (click)="scrollTo('contact')"
       class="ml-4 px-5 py-1 rounded-full cursor-pointer bg-gradient-to-r from-teal-500 to-teal-700 hover:opacity-90 text-white font-normal transition-all"
     >
       Hire Me

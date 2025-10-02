@@ -1,4 +1,5 @@
-import { Component, HostListener, signal } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Component, HostListener, inject, signal } from '@angular/core';
 
 @Component({
   selector: 'navbar',
@@ -8,6 +9,10 @@ import { Component, HostListener, signal } from '@angular/core';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
+
+
+  scroller = inject(ViewportScroller);
+
   navItems = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
@@ -31,5 +36,9 @@ export class NavbarComponent {
     });
 
     this.activeSection.set(current);
+  }
+
+  scrollTo(sectionId:string){
+    this.scroller.scrollToAnchor(sectionId)
   }
 }

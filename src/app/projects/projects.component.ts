@@ -14,14 +14,14 @@ export class ProjectsComponent {
       Description:
         'A modern dashboard to control and monitor multiple IoT devices in one interface.',
       image: 'https://media.istockphoto.com/id/1366732881/photo/smart-home-operating-system-concept-of-future.jpg?b=1&s=612x612&w=0&k=20&c=sMU5KRz54Q2dPUHauib8U1RPASppgpe7tXZsfEKG5yU=',
-      link: '',
+      link: 'https://dev-amadin.github.io/digital-control-app/',
     },
     {
       title: 'AI review generation tool',
       Description:
         'An AI assisting tool for helping users generate reviews according to their positive or negative feedback ',
       image: 'https://images.pexels.com/photos/6153354/pexels-photo-6153354.jpeg',
-      link: '',
+      link: 'https://dev-amadin.github.io/ims-deployment/',
     },
     {
       title: 'Kachasi',

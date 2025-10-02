@@ -9,7 +9,7 @@
 
   <!-- content -->
   <div
-    class="relative z-10 container mx-auto px-6 flex flex-col md:flex-row items-center"
+    class="relative z-10 container mx-auto px-6 flex flex-col md:flex-row items-center gap-6"
   >
     <div class="flex-1 text-center md:text-left">
       <h3 class="text-lg font-light capitalize tracking-wide text-teal-500">
@@ -46,7 +46,7 @@
       <div
         class="flex text-gray-400 gap-5 mt-8 justify-center md:justify-start"
       >
-        <button
+        <a [href]="linkedIn" target="_blank"
           class="p-3 bg-white/10 rounded-full hover:bg-teal-400 transition-colors"
         >
           <img
@@ -54,8 +54,8 @@
             class="w-6 h-6"
             alt="GitHub"
           />
-        </button>
-        <button
+    </a>
+        <a [href]="github" target="_blank"
           class="p-3 bg-white/10 rounded-full hover:bg-teal-400 transition-colors"
         >
           <img
@@ -63,21 +63,29 @@
             class="w-6 h-6"
             alt="GitHub"
           />
-        </button>
+      </a>
       </div>
 
       <div class="mt-8 flex flex-col sm:flex-row gap-4">
         <button
           class="px-6 py-2 cursor-pointer rounded-full text-sm bg-gradient-to-r from-teal-400 to-teal-700 font-light text-white hover:opacity-70 transition-opacity"
-        >
+        (click)="scrollTo('projects')">
           View My Works
         </button>
-        <button
+        <a href="../../assets/files/resume.pdf" download
           class="px-6 py-2 cursor-pointer rounded-full text-sm bg-white/10 backdrop-blur-md font-light text-white hover:opacity-70 transition-opacity"
         >
           Download CV
-        </button>
+      </a>
       </div>
+    </div>
+
+     <div class="flex-1">
+            <img
+                src="../../assets/logos/static-assets.svg"
+                class="w-full h-full"
+                alt=""
+              />
     </div>
   </div>
 </section>

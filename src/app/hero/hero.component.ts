@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Component, inject, OnInit } from '@angular/core';
 
 @Component({
   selector: 'hero',
@@ -8,6 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './hero.component.scss',
 })
 export class HeroComponent implements OnInit {
+  scroller = inject(ViewportScroller);
+
+  github = 'https://github.com/Dev-Amadin';
+  linkedIn = 'https://www.linkedin.com/in/amadin-nosa-idemudia-dev/';
+
   roles = [
     { title: 'Software Developer' },
     { title: 'Full Stack Developer' },
@@ -59,6 +65,10 @@ export class HeroComponent implements OnInit {
     }
 
     this.timerId = setTimeout(() => this.handleTyping(), this.typingSpeed);
+  }
+
+  scrollTo(sectionId: string) {
+    this.scroller.scrollToAnchor(sectionId);
   }
 
   ngOnDestroy(): void {

@@ -27,6 +27,7 @@ export class ExperienceComponent {
         'Spring Boot',
         'MySQL',
       ],
+      link: 'https://unionsystems.com/',
     },
     {
       logo: '../../assets/logos/user-tie.svg',
@@ -43,6 +44,7 @@ export class ExperienceComponent {
         'Ionic',
         'Postman',
       ],
+      link: 'https://www.woodcore.co/',
     },
     {
       logo: '../../assets/logos/hourglass.svg',
@@ -63,6 +65,11 @@ export class ExperienceComponent {
         'Spring Boot',
         'Firebase',
       ],
+      link: ''
     },
   ];
+
+  goToLink(url: string) {
+    window.open(url, '_blank');
+  }
 }
