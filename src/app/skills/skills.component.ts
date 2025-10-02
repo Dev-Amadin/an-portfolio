@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class SkillsComponent {
   skillData = [
     {
-      title: 'Frontend',
+      title: 'Frontend | Mobile',
       skills: [
         { name: 'HTML5', icon: '../../assets/logos/html5.svg' },
         { name: 'CSS3', icon: '../../assets/logos/css3.svg' },
@@ -21,6 +21,7 @@ export class SkillsComponent {
         { name: 'Tailwind', icon: '../../assets/logos/file-code.svg' },
         { name: 'RxJS', icon: '../../assets/logos/file-code.svg' },
         { name: 'Bootstrap', icon: '../../assets/logos/bootstrap.svg' },
+        { name: 'Ionic', icon: '../../assets/logos/file-code.svg' }
       ],
     },
     {
@@ -33,10 +34,6 @@ export class SkillsComponent {
         { name: 'RESTful APIs', icon: '../../assets/logos/file-code.svg' },
         { name: 'Firebase', icon: '../../assets/logos/file-code.svg' },
       ],
-    },
-    {
-      title: 'Mobile',
-      skills: [{ name: 'Ionic', icon: '../../assets/logos/file-code.svg' }],
     },
     {
       title: 'Languages',

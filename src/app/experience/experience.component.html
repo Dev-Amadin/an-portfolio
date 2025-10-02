@@ -1,0 +1,66 @@
+<section
+  id="experience"
+  class="py-20 px-6 bg-gradient-to-r from-[#01191d] to-[#022c2b]"
+>
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-2 text-gray-300">
+      My <span class="text-outline">Experience</span>
+    </h2>
+    <p class="text-gray-500 text-center mb-12">
+      To you my future employer, here are my previous experiences. I come in
+      peace with.
+    </p>
+
+    <div class="relative w-full mx-w-5xl mx-auto px-4 py-12">
+      <div
+        class="absolute left-1/2 md:left-1/2 top-0 bottom-0 w-1 md:flex hidden bg-teal-800 transform -translate-x-1/2"
+      ></div>
+      <div class="space-y-16">
+        @for(exp of experiences; track $index; let e = $even ){
+
+        <div
+          class="relative flex items-center w-full justify-center"
+          [class]="{ 'md:justify-start': e, 'md:justify-end': !e }"
+        >
+          <div
+            class="absolute left-1/2 md:flex hidden transform -translate-1/2 z-10"
+          >
+            <div
+              class="h-10 w-10 rounded-full shadow-lg flex justify-center items-center bg-teal-600"
+            >
+              <img
+                [src]="exp.logo"
+                class="w-6 h-6 text-2xl text-teal-100"
+                [alt]="exp.company"
+              />
+            </div>
+          </div>
+
+          <div
+            class="w-full md:w-[45%] p-6 rounded-xl shadow-lg border border-teal-900 bg-teal-950/50
+             hover:scale-105 transition-transform duration-300 text-left"
+             [class]="{'md:text-right':e,'md:mr-12':e, 'md:ml-12':!e}"
+          >
+            <h3 class="text-xl font-semibold text-gray-100">
+              {{ exp.company }}
+            </h3>
+            <p class="text-sm text-gray-300 mb-3">{{ exp.duration }}</p>
+            <p class="text-sm text-gray-400 text-justify mb-4">
+              {{ exp.description }}
+            </p>
+
+            <div class="flex flex-wrap gap-2 md:justify-end justify-start">
+              @for(skill of exp.skills; track $index){
+              <span
+                class="px-3 py-1 bg-gray-300 rounded-md text-sm font-light"
+                >{{ skill }}</span
+              >
+              }
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
