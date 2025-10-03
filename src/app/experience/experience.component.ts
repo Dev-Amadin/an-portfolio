@@ -26,6 +26,7 @@ export class ExperienceComponent {
         'Java',
         'Spring Boot',
         'MySQL',
+        'SQL Developer'
       ],
       link: 'https://unionsystems.com/',
     },
