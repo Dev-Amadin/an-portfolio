@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class ExperienceComponent {
   experiences = [
     {
-      logo: '../../assets/logos/user-tie.svg',
+      logo: '/assets/logos/user-tie.svg',
       company: 'Union Systems Ltd.',
       duration: '2018 - 2023',
       description:
@@ -31,7 +31,7 @@ export class ExperienceComponent {
       link: 'https://unionsystems.com/',
     },
     {
-      logo: '../../assets/logos/user-tie.svg',
+      logo: '/assets/logos/user-tie.svg',
       company: 'Woodcore Inc.',
       duration: '2022 (contract)',
       description: 'Focus: Mobile banking UI, Angular admin dashboard',
@@ -48,7 +48,7 @@ export class ExperienceComponent {
       link: 'https://www.woodcore.co/',
     },
     {
-      logo: '../../assets/logos/hourglass.svg',
+      logo: '/assets/logos/hourglass.svg',
       company: 'Freelance',
       duration: '2021 - Present',
       description:

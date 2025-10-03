@@ -15,13 +15,13 @@
     >
       <div>
         <h3 class="font-semibold text-xl mb-6 text-white">Contact Details</h3>
-        <div class="space-y-6">
+        <div class="flex flex-col gap-6">
           <div class="flex items-start">
             <div
               class="p-3 bg-white/10 backdrop-blur-3xl rounded-full mr-4 border border-white/20"
             >
               <img
-                src="../../assets/logos/location-dot.svg"
+                src="/assets/logos/location-dot.svg"
                 class="w-6 h-6"
                 alt="location"
               />
@@ -36,7 +36,7 @@
               class="p-3 bg-white/10 backdrop-blur-3xl rounded-full mr-4 border border-white/20"
             >
               <img
-                src="../../assets/logos/envelope.svg"
+                src="/assets/logos/envelope.svg"
                 class="w-6 h-6"
                 alt="location"
               />
@@ -54,7 +54,7 @@
         <form
           [formGroup]="contactForm"
           (ngSubmit)="sendEmail()"
-          class="space-y-4"
+          class="flex flex-col gap-4"
         >
           <div>
             <label for="" class="block mb-2 text-sm text-slate-300"
@@ -129,16 +129,15 @@
               type="submit"
               class="px-4 py-2 rounded-full bg-gradient-to-r from-teal-300 to-teal-700 text-white cursor-pointer hover:opacity-90 transition-all"
             >
-           @if(isSubmitting){
-send...
-           }@else{
- Send Message
-           }
-            
-             
+              @if(isSubmitting){ send... }@else{ Send Message }
             </button>
             @if(callBackMessage){
-            <p class=" text-sm" [class]="{'text-red-400': isError, 'text-teal-300': isSent}">{{ callBackMessage }}</p>
+            <p
+              class="text-sm"
+              [class]="{ 'text-red-400': isError, 'text-teal-300': isSent }"
+            >
+              {{ callBackMessage }}
+            </p>
             }
           </div>
         </form>

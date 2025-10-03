@@ -4,7 +4,7 @@
   <div class="container mx-auto flex items-center justify-between px-6">
     <div class="text-2xl text-outline font-bold">Coder</div>
     <ul
-      class="hidden sm:flex space-x-8 text-white text-sm font-light uppercase"
+      class="hidden sm:flex gap-x-8 text-white text-sm font-light uppercase"
     >
       @for(item of navItems; track item.id){
       <li class="hover:text-teal-500 transition-colors cursor-pointer" [class.text-teal-400]="activeSection()== item.id" (click)="scrollTo(item.id)">{{ item.label }}</li>
