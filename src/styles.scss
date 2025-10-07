@@ -18,3 +18,25 @@ html {
   -webkit-text-stroke: 1px #fff;
   color: transparent;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #022c2b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6; 
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb; 
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #46edd5 #022c2b;
+}
